@@ -25,6 +25,7 @@
  ****************************************************************************************/
 #include <QDialog>
 #include <QAbstractButton>
+#include <QLabel>
 #include "../version.h"
 
 /*****************************************************************************************
@@ -59,7 +60,11 @@ class AboutDialog final : public QDialog
         AboutDialog& operator=(const AboutDialog& rhs) = delete;
 
     private slots:
-        void on_buttonBox_clicked(QAbstractButton *button) noexcept;
+        void on_buttonBox_clicked(QAbstractButton* button) noexcept;
+
+    private: // Methods
+        void formatLabelHeading(QLabel* label) noexcept;
+        void formatLabelText(QLabel* label) noexcept;
 
     private: // Data
         QScopedPointer<Ui::AboutDialog> mUi;
