@@ -64,8 +64,11 @@ AboutDialog::AboutDialog(const Version& appVersion, const QString& gitVersion,
 
 AboutDialog::~AboutDialog() noexcept
 {
-    delete mUi;
 }
+
+/*****************************************************************************************
+ *  Private Methods
+ ****************************************************************************************/
 
 void AboutDialog::on_buttonBox_clicked(QAbstractButton *button) noexcept
 {

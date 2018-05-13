@@ -63,7 +63,7 @@ class AboutDialog final : public QDialog
         void on_buttonBox_clicked(QAbstractButton *button) noexcept;
 
     private: // Data
-        Ui::AboutDialog *mUi;
+        QScopedPointer<Ui::AboutDialog> mUi;
 };
 
 /*****************************************************************************************
