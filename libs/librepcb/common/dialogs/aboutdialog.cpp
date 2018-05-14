@@ -39,8 +39,6 @@ AboutDialog::AboutDialog(QWidget* parent) noexcept :
     // Layout
     mUi->tabWidget->setCurrentIndex(0);
     mUi->horizontalLayout->setAlignment(mUi->logo, Qt::AlignTop);
-    mUi->tabGeneralLayout->setAlignment(Qt::AlignTop);
-    mUi->tabContributingLayout->setAlignment(Qt::AlignTop);
     mUi->logo->setContentsMargins(0, 0, 8, 0);
 
     // Get some version information
@@ -82,8 +80,9 @@ AboutDialog::AboutDialog(QWidget* parent) noexcept :
  */
 void AboutDialog::formatLabelHeading(QLabel* label) noexcept
 {
-    int headerMarginTop = 8;
-    label->setContentsMargins(0, headerMarginTop, 0, 0);
+    int headerMarginTop = 12;
+    int headerMarginBottom = 4;
+    label->setContentsMargins(0, headerMarginTop, 0, headerMarginBottom);
 }
 
 /**
