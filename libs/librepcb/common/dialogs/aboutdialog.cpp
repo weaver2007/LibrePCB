@@ -37,6 +37,7 @@ AboutDialog::AboutDialog(QWidget* parent) noexcept :
     mUi->setupUi(this);
 
     // Layout
+    mUi->tabWidget->setCurrentIndex(0);
     mUi->horizontalLayout->setAlignment(mUi->logo, Qt::AlignTop);
     mUi->tabGeneralLayout->setAlignment(Qt::AlignTop);
     mUi->tabContributingLayout->setAlignment(Qt::AlignTop);
