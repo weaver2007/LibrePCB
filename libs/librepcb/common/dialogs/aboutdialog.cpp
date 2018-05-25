@@ -59,7 +59,6 @@ AboutDialog::AboutDialog(QWidget* parent) noexcept :
     );
 
     // Format content
-    formatLabelHeading(mUi->headerVersion);
     formatLabelHeading(mUi->headerLinks);
     formatLabelHeading(mUi->headerLicense);
     formatLabelHeading(mUi->headerContributeFinancially);
