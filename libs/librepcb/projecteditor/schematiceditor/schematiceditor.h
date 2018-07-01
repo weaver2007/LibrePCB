@@ -49,6 +49,10 @@ class SchematicPagesDock;
 class ErcMsgDock;
 class SES_FSM;
 
+namespace tests {
+class ProjectEditorTest;
+}
+
 namespace Ui {
 class SchematicEditor;
 }
@@ -137,6 +141,8 @@ class SchematicEditor final : public QMainWindow, public IF_GraphicsViewEventHan
 
         // Finite State Machine
         SES_FSM* mFsm;
+
+        friend class tests::ProjectEditorTest;
 };
 
 /*****************************************************************************************

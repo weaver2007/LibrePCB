@@ -86,6 +86,7 @@ class ProjectEditor final : public QObject
 
         workspace::Workspace& getWorkspace() const noexcept {return mWorkspace;}
         Project& getProject() const noexcept {return mProject;}
+        SchematicEditor* getSchematicEditor() {return mSchematicEditor;}
 
         /**
          * @brief Get a reference to the undo stack of the project

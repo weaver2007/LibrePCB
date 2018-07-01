@@ -16,7 +16,7 @@ include(../common.pri)
 # Set preprocessor defines
 DEFINES += TEST_DATA_DIR=\\\"$${PWD}/data\\\"
 
-QT += core widgets network printsupport xml opengl sql concurrent
+QT += core widgets network printsupport xml opengl sql concurrent testlib
 
 CONFIG += console
 CONFIG -= app_bundle
@@ -24,6 +24,7 @@ CONFIG -= app_bundle
 LIBS += \
     -L$${DESTDIR} \
     -lgoogletest \
+    -llibrepcbprojecteditor \
     -llibrepcbeagleimport \
     -llibrepcbworkspace \
     -llibrepcbproject \
@@ -41,6 +42,7 @@ INCLUDEPATH += \
     ../libs \
 
 DEPENDPATH += \
+    ../libs/librepcb/projecteditor \
     ../libs/librepcb/eagleimport \
     ../libs/librepcb/workspace \
     ../libs/librepcb/project \
@@ -52,6 +54,7 @@ DEPENDPATH += \
     ../libs/clipper \
 
 PRE_TARGETDEPS += \
+    $${DESTDIR}/liblibrepcbprojecteditor.a \
     $${DESTDIR}/libgoogletest.a \
     $${DESTDIR}/liblibrepcbeagleimport.a \
     $${DESTDIR}/liblibrepcbworkspace.a \
@@ -85,6 +88,7 @@ SOURCES += \
     main.cpp \
     project/boards/boardplanefragmentsbuildertest.cpp \
     project/projecttest.cpp \
+    projecteditor/projecteditortest.cpp \
     workspace/workspacetest.cpp \
 
 HEADERS += \
