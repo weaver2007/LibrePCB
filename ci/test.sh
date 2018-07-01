@@ -6,8 +6,8 @@ set -eufv -o pipefail
 # run tests
 if [ "${TRAVIS_OS_NAME-}" = "linux" ]
 then
-  xvfb-run -a ./build/generated/unix/qztest
-  xvfb-run -a ./build/generated/unix/tests
+  xvfb-run --server-args="-screen 0 1024x768x24" ./build/generated/unix/qztest
+  xvfb-run --server-args="-screen 0 1024x768x24" ./build/generated/unix/tests
 elif [ "${TRAVIS_OS_NAME-}" = "osx" ]
 then
   ./build/generated/mac/qztest
