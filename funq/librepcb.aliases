@@ -1,0 +1,11 @@
+controlPanel = librepcb__application__ControlPanel
+controlPanelWidget = {controlPanel}::centralWidget
+
+# and some other widgets
+btnNewProject = {controlPanelWidget}::splitter_h::layoutWidget1::frame::newProjectButton
+btnOpenProject = {controlPanelWidget}::splitter_h::layoutWidget1::frame::openProjectButton
+newProjectWizardWindow = {controlPanel}::librepcb__project__editor__NewProjectWizard
+
+schematicEditor = librepcb__project__editor__SchematicEditor
+schematicGraphicsView = {schematicEditor}::librepcb:_:GraphicsView
+schematicGraphicsViewWidget = {schematicGraphicsView}::QWidget
